@@ -1,0 +1,4 @@
+/rpc-gateway
+/bin/
+*.test
+*.out
