@@ -1,0 +1,16 @@
+{
+  "listen": ":8545",
+  "upstreams": [
+    { "name": "primary", "url": "https://eth-mainnet.example.com/v2/YOUR_KEY" },
+    { "name": "backup", "url": "https://rpc.example.org" },
+    { "name": "local", "url": "http://127.0.0.1:8546" }
+  ],
+  "attemptTimeout": "8s",
+  "maxAttempts": 3,
+  "healthInterval": "5s",
+  "unhealthyAfter": 2,
+  "maxLagBlocks": 5,
+  "cacheEntries": 10000,
+  "rateLimit": { "requestsPerSecond": 50, "burst": 100 },
+  "trustProxyHeaders": false
+}
